@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>course user view</title>
+    </head>
+    <body>
+        <center>
+            <h1>syllabus view</h1>
+            <table border="2">
+                <tr>
+                    
+                    <td>syllabus</td>
+              </tr>
+              {% for j in data %}
+            <tr>
+                
+                <td>{{j.syllabus}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>

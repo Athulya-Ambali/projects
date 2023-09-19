@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>course user view</title>
+    </head>
+    <body>
+        <center>
+            <h1>course view</h1>
+            <table border="2">
+                <tr>
+                    
+                    <td>course</td>
+              </tr>
+              {% for j in data %}
+            <tr>
+                
+                <td>{{j.course}}</td>
+            </tr>
+            {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>
