@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>registration doctor</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <center>
+                <table border="3">
+                    <tr>
+                        <td>name</td>
+                        <td><input type="text" name="name"></td>
+                    </tr>
+                    <tr>
+                        <td>age</td>
+                        <td><input type="number" name="age"></td>
+                    </tr>
+                    <tr>
+                        <td>place</td>
+                        <td><input type="text" name="place"></td>
+                    </tr>
+                    <tr>
+                        <td>email</td>
+                        <td><input type="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td>contact</td>
+                        <td><input type="number" name="contact"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="submit"></td>
+                    </tr>
+                </table>
+            </center>
+        </form>
+    </body>
+</html>

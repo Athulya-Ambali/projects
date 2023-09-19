@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>to view doctor registration page</title>
+    </head>
+    <body>
+        <center>
+            <h1>view registration</h1>
+            <table border="2">
+                <tr>
+                    <td>dr_id</td>
+                    <td>name</td>
+                    <td>age</td>
+                    <td>place</td>
+                    <td>email</td>
+                    <td>contact</td>
+                </tr>
+                {% for j in data %}
+                <tr>
+                    <td>{{j.dr_id}}</td>
+                    <td>{{j.name}}</td>
+                    <td>{{j.age}}</td>
+                    <td>{{j.place}}</td>
+                    <td>{{j.email}}</td>
+                    <td>{{j.contact}}</td>
+                    <td><a href="{% url 'update' pk=j.dr_id %}">update</a></td>
+                    <td><a href="{% url 'delete' pk=j.dr_id %}">delete</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>
+

@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>view book page of patient</title>
+    </head>
+    <body>
+        <center>
+            <h1>view patient</h1>
+            <table border="2">
+                <tr>
+                    <td>pa_id</td>
+                    <td>name</td>
+                    <td>address</td>
+                    <td>date</td>
+                    <td>department</td>
+                    <td>disease</td>
+                </tr>
+                {% for j in data %}
+                <tr>
+                    <td>{{j.pa_id}}</td>
+                    <td>{{j.name}}</td>
+                    <td>{{j.address}}</td>
+                    <td>{{j.date}}</td>
+                    <td>{{j.department}}</td>
+                    <td>{{j.disease}}</td>
+                    <td><a href="{% url 'update' pk=j.pa_id %}">update</a></td>
+                    <td><a href="{% url 'delete' pk=j.pa_id %}">delete</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>
