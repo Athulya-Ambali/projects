@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>restaurant details</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <center>
+                <h1>RESTAURANT DETAILS</h1>
+                <br>
+                RESTAURANT NAME
+                <br>
+                <input type="text" name="name">
+                <br><br>
+                OPENING TIME
+                <br>
+                <input type="text" name="time">
+                <br><br>
+                CLOSING TIME
+                <br>
+                <input type="text" name="ctime">
+                <br><br>
+                FOODS AVAILABLE
+                <br><br>
+                <input type="checkbox" id="non" name="non" value="non">
+                <label for="non">Non-vegetarian</label>
+                <br>
+                <input type="checkbox" id="veg" name="veg" value="veg">
+                <label for="veg">Vegetarian</label>
+                <br><br>
+                <input type="submit">
+            </center>
+        </form>
+    </body>
+</html>

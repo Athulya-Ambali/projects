@@ -1,0 +1,14 @@
+<html>
+    <head>
+        <title>customer form</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type="submit" value="addcustomer">
+        </form>
+        <p>{{msg}}</p>
+
+    </body>
+</html>

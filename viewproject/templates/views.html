@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>views</title>
+    </head>
+    <body>
+
+    <center>
+        <h1>view status</h1>
+        <table border="2">
+            <tr>
+                <td>reg_id</td>
+                <td>name</td>
+                <td>address</td>
+                <td>email</td>
+            </tr>
+            {% for j in data %}
+            <tr>
+                <td>{{j.reg_id}}</td>
+                <td>{{j.name}}</td>
+                <td>{{j.address}}</td>
+                <td>{{j.email}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+    </body>
+</html>

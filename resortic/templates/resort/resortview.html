@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>view resort details</title>
+    </head>
+    <body>
+        <center>
+            <h1>VIEW RESORT DETAILS</h1>
+            <table border="2">
+                <tr>
+                    <td>name</td>
+                    <td>email</td>
+                    <td>contact</td>
+                    <td>rooms</td>
+                    <td>single</td>
+                    <td>doble</td>
+                    <td>family</td>
+                    <td>sprice</td>
+                    <td>dprice</td>
+                    <td>fprice</td>
+                    <td>price</td>
+                </tr>
+                {% for j in data %}
+                <tr>
+                    <td>{{j.name}}</td>
+                    <td>{{j.email}}</td>
+                    <td>{{j.contact}}</td>
+                    <td>{{j.rooms}}</td>
+                    <td>{{j.single}}</td>
+                    <td>{{j.doble}}</td>
+                    <td>{{j.family}}</td>
+                    <td>{{j.sprice}}</td>
+                    <td>{{j.dprice}}</td>
+                    <td>{{j.fprice}}</td>
+                    <td>{{j.price}}</td>
+                    <td><a href="{%url 'update' pk=j.ro_id %}">update</td>
+                    <td><a href="{%url 'delete' pk=j.ro_id %}">delete</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>

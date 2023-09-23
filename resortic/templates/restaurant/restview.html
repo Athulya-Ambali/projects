@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>restaurant details view</title>
+    </head>
+    <body>
+        <center>
+            <h1>RESTAURANT VIEW</h1>
+            <table border="2">
+                <tr>
+                    <td>name</td>
+                    <td>time</td>
+                    <td>ctime</td>
+                    <td>non</td>
+                    <td>veg</td>
+                  </tr>
+                  {% for j in data %}
+                  <tr>
+                    <td>{{j.name}}</td>
+                    <td>{{j.time}}</td>
+                    <td>{{j.ctime}}</td>
+                    <td>{{j.non}}</td>
+                    <td>{{j.veg}}</td>
+                    <td><a href="{%url 'up' pk=j.re_id %}">update</td>
+                    <td><a href="{%url 'delete' pk=j.re_id %}">delete</td>
+                  </tr>
+                  {% endfor %}
+            </table>
+        </center>
+    </body>
+</html>

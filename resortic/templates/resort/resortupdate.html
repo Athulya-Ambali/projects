@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>resort details</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <center>
+            <table border="2">
+            <tr>
+                <td>RESORT NAME</td>
+                <td><input type="text" name="name" value="{{data.name}}"></td>
+            </tr>
+            <tr>
+                <td>EMAIL</td>
+                <td><input type="email" name="email" value="{{data.email}}"></td>
+            </tr>
+            <tr>
+                <td>CONTACT</td>
+                <td><input type="text" name="contact" value="{{data.contact}}"></td>
+            </tr>
+            <tr>
+                <td>TOTAL NUMBER OF ROOMS</td>
+                <td><input type="text" name="rooms" value="{{data.rooms}}"></td>
+            </tr>
+            <tr>
+                <td>ROOMS AVAILABLE NOW</td>
+                <td><input type="checkbox" id="single" name="single" value="{{data.single}}">
+                <label for="single">single room</label></td>
+                <td><input type="checkbox" id="doble" name="doble" value="{{data.doble}}">
+                <label for="doble">double room</label></td>
+                <td><input type="checkbox" id="family" name="family" value="{{data.family}}">
+                <label for="family">family room</label></td>
+            </tr>
+            <tr>
+                <td>SINGLE ROOM PRICE</td>
+                <td><input type="text" name="sprice" value="{{data.sprice}}"></td>
+            </tr>
+            <tr>
+                <td>DOUBLE ROOM PRICE</td>
+                <td><input type="text" name="dprice" value="{{data.dprice}}"></td>
+            <tr>
+                <td>FAMILY ROOM PRICE</td>
+                <td><input type="text" name="fprice" value="{{data.fprice}}"></td>
+            </tr>
+            <tr>
+                <td>PER HEAD PRICE</td>
+                <td><input type="text" name="price" value="{{data.price}}"></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="update"></td>
+            </tr>
+            </table>
+            </center>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>restaurant details</title>
+    </head>
+    <body>
+        <form method="post">
+            {% csrf_token %}
+            <center>
+               
+                <h1>RESTAURANT DETAILS</h1>
+                <table border="2">
+              <tr>
+               <td>RESTAURANT NAME</td>
+             
+                <td><input type="text" name="name" value="{{data.name}}"></td>
+            </tr>
+            <tr>
+               <td> OPENING TIME</td>
+             
+                <td><input type="text" name="time" value="{{data.time}}"></td>
+             </tr>
+             <tr>
+            <td>CLOSING TIME</td>
+              
+                <td><input type="text" name="ctime" value="{{data.ctime}}"></td>
+             </tr>
+             <tr>
+                <td>FOODS AVAILABLE</td>
+             
+                <td><input type="checkbox" id="non" name="non" value="{{data.non}}">
+                <label for="non">Non-vegetarian</label></td>
+            
+                <td><input type="checkbox" id="veg" name="veg" value="{{data.name}}">
+                <label for="veg">Vegetarian</label></td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="update"></td>
+            </tr>
+        </table>
+            </center>
+        </form>
+    </body>
+</html>
